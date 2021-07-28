@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.wavy{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+.wavy::before{
+    content: 'ccccccccccccccccc';
+    position: absolute;
+    top:-42px;
+    left: 0;
+    font-size: 4em;
+    color: transparent;
+    text-decoration-style:wavy;
+    text-decoration-color: #3350FF;
+    text-decoration-line: underline;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(-1px);
+    }
+    100%{
+        transform: translateX(-55px);
+    }
+}
